@@ -27,7 +27,7 @@ export default function Home() {
         </header>
 
         <div>
-          <a href="/antigen" className={styles.card}>
+          <a href="" className={styles.card}>
             <Image
               src="/local_mall_black_24dp.svg"
               alt="cart.svg"
