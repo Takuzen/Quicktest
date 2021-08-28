@@ -25,12 +25,16 @@ export default function Home() {
             <h3>QuickTest</h3>
           </div>
           <div className={styles.headerRight}>
-            <Image
-              src={cookies.item_sample > 0 ? "/cart-reddot.svg" : "/cart.svg"}
-              alt="cart.svg"
-              width={30}
-              height={30}
-            ></Image>
+            <Link href="/cart">
+              <a className={styles.card}>
+              <Image
+                src={cookies.item_sample > 0 ? "/cart-reddot.svg" : "/cart.svg"}
+                alt="cart.svg"
+                width={30}
+                height={30}
+              />
+              </a>
+            </Link>
           </div>
         </header>
 
