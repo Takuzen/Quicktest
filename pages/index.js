@@ -8,7 +8,10 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>【公式】QuickTest</title>
-        <meta name="Ant" content="簡易コロナ検査キットの「クイックテスト」" />
+        <meta
+          name="QuickTest"
+          content="簡易コロナ検査キットの「クイックテスト」"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -19,7 +22,7 @@ export default function Home() {
           </div>
           <div className={styles.headerRight}>
             <Image
-              src="/local_mall_black_24dp.svg"
+              src="/cart.svg"
               alt="cart.svg"
               width={30}
               height={30}
@@ -31,7 +34,7 @@ export default function Home() {
           <Link href="/antigen">
             <a className={styles.card}>
               <Image
-                src="/local_mall_black_24dp.svg"
+                src="/cart.svg"
                 alt="cart.svg"
                 width={30}
                 height={30}
