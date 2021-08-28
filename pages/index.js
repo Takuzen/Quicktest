@@ -2,8 +2,12 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
+import { useCookies } from "react-cookie";
 
 export default function Home() {
+  const [cookies] = useCookies([
+    "item_sample",
+  ]);
   return (
     <div className={styles.container}>
       <Head>
@@ -22,7 +26,7 @@ export default function Home() {
           </div>
           <div className={styles.headerRight}>
             <Image
-              src="/cart.svg"
+              src={cookies.item_sample > 0 ? "/cart-reddot.svg" : "/cart.svg"}
               alt="cart.svg"
               width={30}
               height={30}
