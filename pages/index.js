@@ -2,10 +2,19 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
+import { useState } from "react";
 import { useCookies } from "react-cookie";
+import { useRouter } from "next/router";
 
 export default function Home() {
-  const [cookies] = useCookies(["item_sample"]);
+  const [cookies, setCookie] = useCookies(["item_sample"]);
+  const updateCookie = (item, _count) => {
+    const current = parseInt(cookies[`item_${item}`]);
+    const count = parseInt(_count);
+    setCookie(`item_${item}`, current && current ? current + count : count);
+  };
+  const [count] = useState(1);
+  const router = useRouter();
   return (
     <div className={styles.container}>
       <Head>
@@ -22,8 +31,8 @@ export default function Home() {
           <div className={styles.headerLeft}>
             <Image
               className={styles.textLogoContainer}
-              src="/logo-text.png"
-              alt="logo-text"
+              src="/logo.png"
+              alt="logo"
               width={150}
               height={40}
             ></Image>
@@ -45,7 +54,7 @@ export default function Home() {
         </header>
 
         <section className={styles.campaignLine}>
-          <p>現在予約受付中！</p>
+          <p>🔥 23区内は18時までのご注文で当日お届け 🔥</p>
         </section>
 
         <section className={styles.productName}>
@@ -57,10 +66,11 @@ export default function Home() {
           <Link href="/antigen">
             <a className={styles.card}>
               <Image
-                src="/icheck.png"
-                alt="icheck"
-                width={300}
-                height={150}
+                className={styles.productImg}
+                src="/LionRun-antigen-box.png"
+                alt="LionRun-antigen-box"
+                width={350}
+                height={180}
               ></Image>
             </a>
           </Link>
@@ -100,33 +110,35 @@ export default function Home() {
             ></Image>
           </div>
 
-          <Image
-            className={styles.weWillAnswer}
-            src="/wewillanswer.png"
-            alt="wewillanswer"
-            width={240}
-            height={45}
-          ></Image>
+          <div className={styles.otherTwoFeatures}>
+            <Image
+              className={styles.weWillAnswer}
+              src="/wewillanswer.png"
+              alt="wewillanswer"
+              width={240}
+              height={45}
+            ></Image>
 
-          <Image
-            className={styles.weShip365}
-            src="/weship365.png"
-            alt="weship365"
-            width={160}
-            height={45}
-          ></Image>
+            <Image
+              className={styles.weShip365}
+              src="/weship365.png"
+              alt="weship365"
+              width={160}
+              height={45}
+            ></Image>
+          </div>
         </section>
-      </main>
 
-      <footer className={styles.footer}>
-        <p href="">Powered by QuickTest</p>
-      </footer>
+        <button
+          className={styles.applyBtn}
+          onClick={() => {
+            updateCookie("sample", count);
+            router.push("/cart");
+          }}
+        >
+          今すぐ申し込む
+        </button>
+      </main>
     </div>
   );
 }
-
-/* ロゴの著作権明記
- <a href="https://www.vecteezy.com/free-vector/ant">
-          Ant Vectors by Vecteezy
- </a> 
-*/
