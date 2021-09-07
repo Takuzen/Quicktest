@@ -19,10 +19,10 @@ export default function Home() {
     <div className={styles.container}>
       <html lang="ja">
         <Head>
-          <title>【公式】QuickTest</title>
+          <title>【公式】クイックテスト</title>
           <meta
             name="description"
-            content="新型コロナウィルスに対応した抗原検査キットの「クイックテスト」製品の紹介。子供でも自分でできるイラスト使用ガイド付き。最速10分で、変異株をも見逃さず、PCR検査に劣らない特異度の正確判定。陰性であった場合、無料で即日スマホからずっと見せられる、デジタル陰性証明書をお送りします。365日発送対応いたします。"
+            content="国内デザインの抗原検査キット、変異株にも対応。子供が自分で使えるイラストの取扱書付き。最速10分で、PCR検査に比肩する正確な判定。陰性の場合、スマホから見られる、デジタル陰性証明書を無料即日発行。"
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
