@@ -16,6 +16,7 @@
   display: flex;
   justify-content: space-between;
   background: white;
+  z-index: 3;
 }
 
 .main {
@@ -62,7 +63,11 @@
   margin-right: 30px;
 }
 
-/*
+.corporateFormLink {
+  font-family: serif;
+  font-size: 14px;
+}
+
 .campaignLine {
   height: 40px;
   z-index: 3;
@@ -70,14 +75,13 @@
   top: 115px;
   width: 100%;
   display: flex;
-  background: #f9be16;
-  color: black;
+  background: #bc002d;
+  color: white;
   font-family: serif;
   font-weight: bold;
   align-items: center;
   justify-content: center;
 }
-*/
 
 .productName {
   display: flex;
@@ -216,11 +220,9 @@
     height: 80px;
   }
 
-  /*
   .campaignLine {
     top: 80px;
   }
-  */
 
   .otherTwoFeatures {
     margin-top: 20px;

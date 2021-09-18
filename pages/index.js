@@ -19,10 +19,10 @@ export default function Home() {
     <div className={styles.container}>
       <html lang="ja">
         <Head>
-          <title>【公式】クイックテスト</title>
+          <title>QuickTest - 公式サイト</title>
           <meta
             name="description"
-            content="国内デザインの抗原検査キット、変異株にも対応。子供が自分で使えるイラストの取扱書付き。最速10分で、PCR検査に比肩する正確な判定。陰性の場合、スマホから見られる、デジタル陰性証明書を無料即日発行。"
+            content="新しい日本設計の抗原検査キット、変異株にも対応。子供が自分で使えるイラストの取扱書付き。最速10分で、PCR検査に比肩する正確な判定。陰性の場合、スマホから見られる、デジタル陰性証明書を無料即日発行。"
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
@@ -39,6 +39,9 @@ export default function Home() {
               ></Image>
             </div>
             <div className={styles.headerRight}>
+              <Link href="https://us6.list-manage.com/survey?u=658c42124313d8aff4cb34f19&id=381a00ef47&attribution=false">
+                <p className={styles.corporateFormLink}>法人のお客さま</p>
+              </Link>
               <Link href="/cart">
                 <a className={styles.card}>
                   <Image
@@ -54,13 +57,9 @@ export default function Home() {
             </div>
           </header>
 
-          {/* 
-
-        <section className={styles.campaignLine}>
-          <p>🔥 23区内は18時までのご注文で当日お届け 🔥</p>
-        </section>
-
-        */}
+          <section className={styles.campaignLine}>
+            <p>Designed in Japan</p>
+          </section>
 
           <section className={styles.productName}>
             <p className={styles.PNFirstLine}>新型コロナウィルス</p>
@@ -126,8 +125,8 @@ export default function Home() {
 
               <Image
                 className={styles.weShip365}
-                src="/weship365.png"
-                alt="weship365"
+                src="/weShipEveryday.png"
+                alt="weShipEveryday"
                 width={160}
                 height={45}
               ></Image>
@@ -143,6 +142,14 @@ export default function Home() {
           >
             今すぐ申し込む
           </button>
+
+          <Image
+            className={styles.weShip365}
+            src="/aboutAntigenTest.png"
+            alt="about-antigen-test"
+            width={700}
+            height={300}
+          ></Image>
         </main>
       </html>
     </div>
