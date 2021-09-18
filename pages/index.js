@@ -43,7 +43,7 @@ export default function Home() {
                 <p className={styles.corporateFormLink}>法人のお客さま</p>
               </Link>
               <Link href="/cart">
-                <a className={styles.card}>
+                <a className={styles.cart}>
                   <Image
                     src={
                       cookies.item_sample > 0 ? "/cart-reddot.svg" : "/cart.svg"

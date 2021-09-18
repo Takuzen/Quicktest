@@ -68,6 +68,16 @@
   font-size: 14px;
 }
 
+.corporateFormLink:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.cart:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
 .campaignLine {
   height: 40px;
   z-index: 3;
@@ -152,6 +162,11 @@
   font-family: sans-serif;
 }
 
+.applyBtn:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
 /* /cart */
 
 .cartHeader {
@@ -214,7 +229,7 @@
 
 @media (max-width: 600px) {
   .main {
-    top: 80px;
+    top: 120px;
   }
   .header {
     height: 80px;
