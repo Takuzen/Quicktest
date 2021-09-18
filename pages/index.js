@@ -143,6 +143,7 @@ export default function Home() {
             今すぐ申し込む
           </button>
 
+          {/*
           <Image
             className={styles.weShip365}
             src="/aboutAntigenTest.png"
@@ -150,6 +151,7 @@ export default function Home() {
             width={700}
             height={300}
           ></Image>
+          */}
         </main>
       </html>
     </div>
