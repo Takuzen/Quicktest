@@ -1,2 +1,5 @@
-1. yarn
-2. yarn dev
+### Get Started
+```
+yarn
+yarn dev
+```
